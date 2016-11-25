@@ -22,9 +22,9 @@
 {
     if (!updatingLocation && _locationAnnotationView != nil)
     {
-    [UIView animateWithDuration:0.1 animations:^{
-    _locationAnnotationView.rotateDegree = userLocation.heading.trueHeading - _mapView.rotationDegree;
-    }];
+        [UIView animateWithDuration:0.1 animations:^{
+            _locationAnnotationView.rotateDegree = userLocation.heading.trueHeading - _mapView.rotationDegree;
+        }];
     }
 
     if (_record.latitude != userLocation.coordinate.latitude || _record.longitude != userLocation.coordinate.longitude) {
