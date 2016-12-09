@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <MAMapKit/MAMapKit.h>
 #import "LocationAnnotationView.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 @interface ViewController ()<MAMapViewDelegate>
 {
@@ -77,11 +78,14 @@
 }
 
 - (void)viewDidLoad {
+    [AMapServices sharedServices].enableHTTPS = YES;
     _mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
     _mapView.delegate = self;
     _mapView.customizeUserLocationAccuracyCircleRepresentation = YES;
     
+    _mapView.zoomLevel = 18;
     _mapView.userTrackingMode = MAUserTrackingModeFollow;
+    
 
     [self.view addSubview:_mapView];
     

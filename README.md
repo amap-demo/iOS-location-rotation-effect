@@ -15,6 +15,8 @@
 
 ## 核心难点 ##
 
+objective-c:
+
 ``` objc
 
 ///定位回调
@@ -30,6 +32,23 @@
     if (_record.latitude != userLocation.coordinate.latitude || _record.longitude != userLocation.coordinate.longitude) {
         NSLog(@"changed");
         _record = userLocation.coordinate;
+    }
+}
+
+```
+
+swift:
+
+``` swift
+func mapView(_ mapView: MAMapView!, didUpdate userLocation: MAUserLocation!, updatingLocation: Bool) {
+    if !updatingLocation && _locationAnnotationView != nil {
+        UIView.animate(withDuration: 0.1, animations: { 
+        self._locationAnnotationView.rotateDegree = CGFloat(userLocation.heading.trueHeading) - mapView.rotationDegree
+        })
+    }
+
+    if _record.latitude != userLocation.coordinate.latitude || _record.longitude != userLocation.coordinate.longitude {
+        _record = userLocation.coordinate
     }
 }
 
