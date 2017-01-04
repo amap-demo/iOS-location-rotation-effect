@@ -42,12 +42,12 @@ class ViewController: UIViewController, MAMapViewDelegate {
             
             if annotationView == nil {
                 annotationView = LocationAnnotationView(annotation: annotation, reuseIdentifier: userLocationStyleReuseIndetifier)
+                annotationView.canShowCallout = true
             }
             
-            annotationView.image = UIImage(named: "userPosition")
-            annotationView.canShowCallout = true
             _locationAnnotationView = annotationView as! LocationAnnotationView
-            
+            _locationAnnotationView.updateImage(image: UIImage(named: "userPosition"))
+   
             return annotationView
         }
         

@@ -50,11 +50,12 @@
         {
             annotationView = [[LocationAnnotationView alloc] initWithAnnotation:annotation
                                                           reuseIdentifier:userLocationStyleReuseIndetifier];
+            
+            annotationView.canShowCallout = YES;
         }
         
-        annotationView.image = [UIImage imageNamed:@"userPosition"];
-        annotationView.canShowCallout = YES;
         _locationAnnotationView = (LocationAnnotationView *)annotationView;
+        [_locationAnnotationView updateImage:[UIImage imageNamed:@"userPosition"]];
         
         return annotationView;
     }

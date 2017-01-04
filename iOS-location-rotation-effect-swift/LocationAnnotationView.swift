@@ -8,25 +8,37 @@
 
 import UIKit
 
-class LocationAnnotationView: MAAnnotationView{
+class LocationAnnotationView: MAAnnotationView {
+    
+    var contentImageView: UIImageView!
+    
     var rotateDegree:CGFloat{
         set {
-            self.transform = CGAffineTransform(rotationAngle: newValue * CGFloat(M_PI) / 180.0)
+            self.contentImageView.transform = CGAffineTransform(rotationAngle: newValue * CGFloat(M_PI) / 180.0)
         }
         get {
             return self.rotateDegree
         }
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override init!(annotation: MAAnnotation!, reuseIdentifier: String!) {
         
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         
+        self.contentImageView = UIImageView()
+        self.addSubview(self.contentImageView)
         self.rotateDegree = 0
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+
+    func updateImage(image: UIImage!) {
+        
+        self.bounds = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
+        self.contentImageView.image = image
+        self.contentImageView.sizeToFit()
     }
     
     

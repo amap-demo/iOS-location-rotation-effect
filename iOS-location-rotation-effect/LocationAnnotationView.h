@@ -10,7 +10,10 @@
 #import <MAMapKit/MAMapKit.h>
 
 @interface LocationAnnotationView : MAAnnotationView
-    
-@property (nonatomic, assign)CGFloat rotateDegree;
+
+@property (nonatomic, strong) UIImageView *contentImageView;
+@property (nonatomic, assign) CGFloat rotateDegree;
+
+- (void)updateImage:(UIImage *)image;
 
 @end
