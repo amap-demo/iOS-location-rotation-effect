@@ -15,7 +15,6 @@
 {
     MAMapView *_mapView;
     LocationAnnotationView *_locationAnnotationView;
-    CLLocationCoordinate2D _record;
 }
     
 @end
@@ -70,11 +69,6 @@
         [UIView animateWithDuration:0.1 animations:^{
             _locationAnnotationView.rotateDegree = userLocation.heading.trueHeading - _mapView.rotationDegree;
         }];
-    }
-
-    if (_record.latitude != userLocation.coordinate.latitude || _record.longitude != userLocation.coordinate.longitude) {
-        NSLog(@"changed");
-        _record = userLocation.coordinate;
     }
 }
 

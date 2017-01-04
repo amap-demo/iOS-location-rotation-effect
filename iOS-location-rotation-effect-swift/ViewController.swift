@@ -12,10 +12,8 @@ class ViewController: UIViewController, MAMapViewDelegate {
 
     var _mapView:MAMapView!
     var _locationAnnotationView:LocationAnnotationView!
-    var _record:CLLocationCoordinate2D
     
     required init?(coder aDecoder: NSCoder) {
-        self._record = CLLocationCoordinate2DMake(0, 0)
         super.init(coder: aDecoder)
         
     }
@@ -59,10 +57,6 @@ class ViewController: UIViewController, MAMapViewDelegate {
             UIView.animate(withDuration: 0.1, animations: { 
                 self._locationAnnotationView.rotateDegree = CGFloat(userLocation.heading.trueHeading) - mapView.rotationDegree
             })
-        }
-        
-        if _record.latitude != userLocation.coordinate.latitude || _record.longitude != userLocation.coordinate.longitude {
-            _record = userLocation.coordinate
         }
     }
     
