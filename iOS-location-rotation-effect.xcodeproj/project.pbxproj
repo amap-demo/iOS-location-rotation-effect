@@ -22,7 +22,18 @@
 		19FC7C491DFAA6E0007FFFEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19FC7C471DFAA6E0007FFFEF /* LaunchScreen.storyboard */; };
 		19FC7C4F1DFAA7B0007FFFEF /* LocationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC7C4E1DFAA7B0007FFFEF /* LocationAnnotationView.swift */; };
 		5B5E168381C3419D240FC16E /* libPods-iOS-location-rotation-effect-swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0F9BB1F6CD03290EA32F47 /* libPods-iOS-location-rotation-effect-swift.a */; };
+		6A2D0F4B1E1DF29D0036ACED /* iOS_location_rotation_effectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2D0F4A1E1DF29D0036ACED /* iOS_location_rotation_effectUITests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6A2D0F4D1E1DF29D0036ACED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 192C17FE1DE8538A0035380F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 192C18051DE8538B0035380F;
+			remoteInfo = "iOS-location-rotation-effect";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		192C18061DE8538B0035380F /* iOS-location-rotation-effect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-location-rotation-effect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +58,9 @@
 		19FC7C4E1DFAA7B0007FFFEF /* LocationAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAnnotationView.swift; sourceTree = "<group>"; };
 		19FC7C521DFAAA73007FFFEF /* BridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
 		5A0F9BB1F6CD03290EA32F47 /* libPods-iOS-location-rotation-effect-swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-location-rotation-effect-swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A2D0F481E1DF29D0036ACED /* iOS-location-rotation-effectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-location-rotation-effectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A2D0F4A1E1DF29D0036ACED /* iOS_location_rotation_effectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_location_rotation_effectUITests.m; sourceTree = "<group>"; };
+		6A2D0F4C1E1DF29D0036ACED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80EF65731381384EE6CD9519 /* Pods-iOS-location-rotation-effect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-location-rotation-effect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-location-rotation-effect/Pods-iOS-location-rotation-effect.debug.xcconfig"; sourceTree = "<group>"; };
 		95F627174EFB4E219D88A0ED /* Pods-iOS-location-rotation-effect-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-location-rotation-effect-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-location-rotation-effect-swift/Pods-iOS-location-rotation-effect-swift.release.xcconfig"; sourceTree = "<group>"; };
 		987F0608E83CCDA39906B10B /* Pods-iOS-location-rotation-effect-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-location-rotation-effect-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-location-rotation-effect-swift/Pods-iOS-location-rotation-effect-swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +85,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6A2D0F451E1DF29D0036ACED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,6 +100,7 @@
 			children = (
 				192C18081DE8538B0035380F /* iOS-location-rotation-effect */,
 				19FC7C3D1DFAA6E0007FFFEF /* iOS-location-rotation-effect-swift */,
+				6A2D0F491E1DF29D0036ACED /* iOS-location-rotation-effectUITests */,
 				192C18071DE8538B0035380F /* Products */,
 				49F14482569D00B03C7011C9 /* Pods */,
 				668FC55D2DA3F6CF3BEAF3B8 /* Frameworks */,
@@ -90,6 +112,7 @@
 			children = (
 				192C18061DE8538B0035380F /* iOS-location-rotation-effect.app */,
 				19FC7C3C1DFAA6E0007FFFEF /* iOS-location-rotation-effect-swift.app */,
+				6A2D0F481E1DF29D0036ACED /* iOS-location-rotation-effectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +178,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6A2D0F491E1DF29D0036ACED /* iOS-location-rotation-effectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6A2D0F4A1E1DF29D0036ACED /* iOS_location_rotation_effectUITests.m */,
+				6A2D0F4C1E1DF29D0036ACED /* Info.plist */,
+			);
+			path = "iOS-location-rotation-effectUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,6 +230,24 @@
 			productReference = 19FC7C3C1DFAA6E0007FFFEF /* iOS-location-rotation-effect-swift.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6A2D0F471E1DF29D0036ACED /* iOS-location-rotation-effectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A2D0F511E1DF29D0036ACED /* Build configuration list for PBXNativeTarget "iOS-location-rotation-effectUITests" */;
+			buildPhases = (
+				6A2D0F441E1DF29D0036ACED /* Sources */,
+				6A2D0F451E1DF29D0036ACED /* Frameworks */,
+				6A2D0F461E1DF29D0036ACED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A2D0F4E1E1DF29D0036ACED /* PBXTargetDependency */,
+			);
+			name = "iOS-location-rotation-effectUITests";
+			productName = "iOS-location-rotation-effectUITests";
+			productReference = 6A2D0F481E1DF29D0036ACED /* iOS-location-rotation-effectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -218,6 +268,12 @@
 						DevelopmentTeam = YMJ372W38W;
 						ProvisioningStyle = Manual;
 					};
+					6A2D0F471E1DF29D0036ACED = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = YMJ372W38W;
+						ProvisioningStyle = Manual;
+						TestTargetID = 192C18051DE8538B0035380F;
+					};
 				};
 			};
 			buildConfigurationList = 192C18011DE8538A0035380F /* Build configuration list for PBXProject "iOS-location-rotation-effect" */;
@@ -235,6 +291,7 @@
 			targets = (
 				192C18051DE8538B0035380F /* iOS-location-rotation-effect */,
 				19FC7C3B1DFAA6E0007FFFEF /* iOS-location-rotation-effect-swift */,
+				6A2D0F471E1DF29D0036ACED /* iOS-location-rotation-effectUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +314,13 @@
 				19FC7C491DFAA6E0007FFFEF /* LaunchScreen.storyboard in Resources */,
 				19FC7C461DFAA6E0007FFFEF /* Assets.xcassets in Resources */,
 				19FC7C441DFAA6E0007FFFEF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A2D0F461E1DF29D0036ACED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +441,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6A2D0F441E1DF29D0036ACED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A2D0F4B1E1DF29D0036ACED /* iOS_location_rotation_effectUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6A2D0F4E1E1DF29D0036ACED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 192C18051DE8538B0035380F /* iOS-location-rotation-effect */;
+			targetProxy = 6A2D0F4D1E1DF29D0036ACED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		192C18121DE8538B0035380F /* Main.storyboard */ = {
@@ -578,6 +658,38 @@
 			};
 			name = Release;
 		};
+		6A2D0F4F1E1DF29D0036ACED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = YMJ372W38W;
+				INFOPLIST_FILE = "iOS-location-rotation-effectUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autonavi.iOS-location-rotation-effectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9b821a78-8ad6-4cf7-b6b0-31b43df04bbe";
+				PROVISIONING_PROFILE_SPECIFIER = openPlatform_development;
+				TEST_TARGET_NAME = "iOS-location-rotation-effect";
+			};
+			name = Debug;
+		};
+		6A2D0F501E1DF29D0036ACED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = YMJ372W38W;
+				INFOPLIST_FILE = "iOS-location-rotation-effectUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.autonavi.iOS-location-rotation-effectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9b821a78-8ad6-4cf7-b6b0-31b43df04bbe";
+				PROVISIONING_PROFILE_SPECIFIER = openPlatform_development;
+				TEST_TARGET_NAME = "iOS-location-rotation-effect";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -607,6 +719,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6A2D0F511E1DF29D0036ACED /* Build configuration list for PBXNativeTarget "iOS-location-rotation-effectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A2D0F4F1E1DF29D0036ACED /* Debug */,
+				6A2D0F501E1DF29D0036ACED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

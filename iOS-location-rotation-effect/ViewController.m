@@ -78,7 +78,6 @@
     _mapView.delegate = self;
     _mapView.customizeUserLocationAccuracyCircleRepresentation = YES;
     
-    _mapView.zoomLevel = 18;
     _mapView.userTrackingMode = MAUserTrackingModeFollow;
     
 

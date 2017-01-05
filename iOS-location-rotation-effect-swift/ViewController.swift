@@ -67,11 +67,7 @@ class ViewController: UIViewController, MAMapViewDelegate {
         _mapView = MAMapView(frame: view.bounds)
         _mapView.delegate = self
         _mapView.customizeUserLocationAccuracyCircleRepresentation = true
-        
-        _mapView.zoomLevel = 18
         _mapView.userTrackingMode = .follow
-        
-        
         
         view.addSubview(_mapView)
         
