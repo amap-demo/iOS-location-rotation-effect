@@ -35,12 +35,12 @@
 - (void)testExample {
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    
-    [[[XCUIApplication alloc] init].images[@"userPosition"] tap];
+    XCUIElement *userpositionImage = [[XCUIApplication alloc] init].images[@"userPosition"];
+    [userpositionImage tap];
     
     // wait
     XCTestExpectation *e = [self expectationWithDescription:@"empty wait"];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [e fulfill];
     });
     [self waitForExpectationsWithTimeout:5 handler:nil];
