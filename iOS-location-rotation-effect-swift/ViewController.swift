@@ -54,9 +54,7 @@ class ViewController: UIViewController, MAMapViewDelegate {
     
     func mapView(_ mapView: MAMapView!, didUpdate userLocation: MAUserLocation!, updatingLocation: Bool) {
         if !updatingLocation && _locationAnnotationView != nil {
-            UIView.animate(withDuration: 0.1, animations: { 
-                self._locationAnnotationView.rotateDegree = CGFloat(userLocation.heading.trueHeading) - mapView.rotationDegree
-            })
+            self._locationAnnotationView.rotateDegree = CGFloat(userLocation.heading.trueHeading) - mapView.rotationDegree
         }
     }
     
@@ -67,10 +65,14 @@ class ViewController: UIViewController, MAMapViewDelegate {
         _mapView = MAMapView(frame: view.bounds)
         _mapView.delegate = self
         _mapView.customizeUserLocationAccuracyCircleRepresentation = true
-        _mapView.userTrackingMode = .follow
         
         view.addSubview(_mapView)
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        _mapView.userTrackingMode = .follow
     }
     
 

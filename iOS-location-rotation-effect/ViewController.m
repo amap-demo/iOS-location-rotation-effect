@@ -66,24 +66,28 @@
 {
     if (!updatingLocation && _locationAnnotationView != nil)
     {
-        [UIView animateWithDuration:0.1 animations:^{
-            _locationAnnotationView.rotateDegree = userLocation.heading.trueHeading - _mapView.rotationDegree;
-        }];
+        _locationAnnotationView.rotateDegree = userLocation.heading.trueHeading - _mapView.rotationDegree;
     }
 }
 
 - (void)viewDidLoad {
-    [AMapServices sharedServices].enableHTTPS = YES;
+    
+    [super viewDidLoad];
+    
     _mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
     _mapView.delegate = self;
     _mapView.customizeUserLocationAccuracyCircleRepresentation = YES;
     
-    _mapView.userTrackingMode = MAUserTrackingModeFollow;
-    
 
     [self.view addSubview:_mapView];
     
-    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    _mapView.userTrackingMode = MAUserTrackingModeFollow;
 }
 
 @end
