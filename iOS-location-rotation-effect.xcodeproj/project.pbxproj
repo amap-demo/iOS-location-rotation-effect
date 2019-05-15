@@ -198,7 +198,6 @@
 				192C18021DE8538B0035380F /* Sources */,
 				192C18031DE8538B0035380F /* Frameworks */,
 				192C18041DE8538B0035380F /* Resources */,
-				25748B8D137CC3DD39E5FC72 /* [CP] Embed Pods Frameworks */,
 				D603F15AD603B4792D430520 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -218,7 +217,6 @@
 				19FC7C381DFAA6E0007FFFEF /* Sources */,
 				19FC7C391DFAA6E0007FFFEF /* Frameworks */,
 				19FC7C3A1DFAA6E0007FFFEF /* Resources */,
-				05A838F59806B14FB65307FB /* [CP] Embed Pods Frameworks */,
 				E6E86321F58B4E62C16FF9E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -281,6 +279,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -327,36 +326,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05A838F59806B14FB65307FB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-location-rotation-effect-swift/Pods-iOS-location-rotation-effect-swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		25748B8D137CC3DD39E5FC72 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-location-rotation-effect/Pods-iOS-location-rotation-effect-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		60BE8C6A8D1549257859E295 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,16 +368,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOS-location-rotation-effect/Pods-iOS-location-rotation-effect-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-location-rotation-effect/Pods-iOS-location-rotation-effect-resources.sh",
 				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-location-rotation-effect/Pods-iOS-location-rotation-effect-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS-location-rotation-effect/Pods-iOS-location-rotation-effect-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E6E86321F58B4E62C16FF9E9 /* [CP] Copy Pods Resources */ = {
@@ -417,16 +386,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOS-location-rotation-effect-swift/Pods-iOS-location-rotation-effect-swift-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-location-rotation-effect-swift/Pods-iOS-location-rotation-effect-swift-resources.sh",
 				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-location-rotation-effect-swift/Pods-iOS-location-rotation-effect-swift-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS-location-rotation-effect-swift/Pods-iOS-location-rotation-effect-swift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -648,7 +617,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = "./iOS-location-rotation-effect-swift/BridgeHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -668,7 +637,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = openPlatformInhouse;
 				SWIFT_OBJC_BRIDGING_HEADER = "./iOS-location-rotation-effect-swift/BridgeHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

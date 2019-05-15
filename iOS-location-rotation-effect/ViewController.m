@@ -20,6 +20,11 @@
 @end
 
 @implementation ViewController
+
+
+- (void)mapViewRequireLocationAuth:(CLLocationManager *)locationManager {
+    [locationManager requestAlwaysAuthorization];
+}
     
 - (MAOverlayRenderer *)mapView:(MAMapView *)mapView rendererForOverlay:(id <MAOverlay>)overlay
 {
@@ -78,7 +83,6 @@
     _mapView.delegate = self;
     _mapView.customizeUserLocationAccuracyCircleRepresentation = YES;
     
-
     [self.view addSubview:_mapView];
     
 }

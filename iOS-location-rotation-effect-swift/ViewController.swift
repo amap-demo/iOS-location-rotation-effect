@@ -18,13 +18,17 @@ class ViewController: UIViewController, MAMapViewDelegate {
         
     }
     
+    func mapViewRequireLocationAuth(_ locationManager: CLLocationManager!) {
+        locationManager.requestAlwaysAuthorization()
+    }
+    
     func mapView(_ mapView: MAMapView!, rendererFor overlay: MAOverlay!) -> MAOverlayRenderer! {
         if overlay.isEqual(mapView.userLocationAccuracyCircle) {
             let accuracyCircleRender:MACircleRenderer! = MACircleRenderer.init(circle: overlay as! MACircle!)
             
             accuracyCircleRender.lineWidth = 2.0
             accuracyCircleRender.strokeColor = UIColor.lightGray
-            accuracyCircleRender.fillColor = UIColor.init(colorLiteralRed: 1, green: 0, blue: 0, alpha: 0.3)
+            accuracyCircleRender.fillColor = UIColor.init(red: 1, green: 0, blue: 0, alpha: 0.3)
             
             return accuracyCircleRender
         }
